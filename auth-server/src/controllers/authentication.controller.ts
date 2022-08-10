@@ -18,9 +18,17 @@ class AuthenticationController implements Controller {
   }
 
   private initializeRoutes() {
+    this.router.get(`/`, this.displayWelcomeMessage);
     this.router.post(`/token`, this.getAccessToken);
     this.router.delete(`/token`, this.removeAccessToken);
     this.router.get('/content', authMiddleware, this.getRestrictedItem);
+  }
+
+  private displayWelcomeMessage = async (
+    _: express.Request,
+    response: express.Response,
+  ): Promise<void> => {
+    response.send(`Welcome to the AuthFA2 backend server! Directly calling me isn't fun; so head to https://authfa2-frontend.vercel.app/ to explore more 🚀`);
   }
 
   private getAccessToken = async (
