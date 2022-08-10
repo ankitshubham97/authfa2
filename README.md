@@ -24,10 +24,26 @@ AuthFA2 lays down the protocol of how we can leverage FA2 tokens to address the 
 This repository contains 3 sub-projects:
 1. [AuthFA2 protocol][README AuthFA2].
 2. Implementation of the protocol as [NodeJS SDK][AuthFA2 NodeJS SDK].
-3. A [complete demo][Demo App] consisting of [smart contract][Demo FA2 Contract], [backend service][Demo Backend] and [frontend][Demo App], powered by the [AuthFA2 NodeJS SDK][AuthFA2 NodeJS SDK]. The app is based on Jakartanet and the related FA2 smart contract is deployed [here][Demo FA2 Contract]
+3. A [complete demo][Demo App] consisting of [smart contract][Demo FA2 Contract], [backend service][Demo Backend] and [frontend][Demo App], powered by the [AuthFA2 NodeJS SDK][AuthFA2 NodeJS SDK]. The app is based on Jakartanet and the related FA2 smart contract is deployed [here][Demo FA2 Contract] (Contract address: KT1X2ifoZhfgz1AhYfHVV36P1sf9UwJS56HY on Jakartanet)
+The smart contract is in the `smart-contracts` directory.
 
 ## [TezAsia Hackathon 2022][Tezasia Hackathon]
 This project is developed as part of [Tezasia Hackathon][Tezasia Hackathon] (but the project itself aligns with my larger vision; see [Future plans][Future plans] below). If you are a panelist/judge/reviewer, please check out the steps [here][README Frontend] on how to interact with the project.
+
+### For the panelists/judges/reviewers of TezAsia Hackathon 2022
+The demo video is here: https://youtu.be/pMP9pZe77B4
+The app is deployed at https://authfa2-frontend.vercel.app/
+The app is based on Jakartanet and the related FA2 smart contract is deployed [here][Demo FA2 Contract] (Contract address: KT1X2ifoZhfgz1AhYfHVV36P1sf9UwJS56HY)
+
+If you want to interact with the app, you would need a wallet which has the 'Rick' FA2 token (as told in the demo video). Here is a list of private keys of the wallets which contain the 'Rick' FA2 tokens:
+```sh
+edskS66ZbqHyZWuRAk2Js1veaK6h1vju6DoZwMAuxkMP37LgVjXJH8wm7cWCTZiazWaaPG8rDXq4h9v2G8hJUtvx5V38vgiXVi
+```
+To check the unhappy path, you could just use any random wallet.
+
+You could also choose to run your own instance of the backend and the frontend. You would find the instructions in the respective README files:
+- [Running Backend][README Auth Server]
+- [Running Frontend][README Frontend]
 
 ## Future plans
 The [demo][Demo App] is just a POC. The larger vision is to have an array of applications powered by AuthFA2 and similar protocols in other chains as well. As a matter of fact, after getting accepted as a builder fellow in the [Polygon Fellowship, 2022][Polygon Fellowship 2022], I have been working on developing a similar project on Polygon chain. I was able to integrate my protocol with [Owncast][Owncast Repo] (demo video [here][Owncast-X demo]) and more improvements are done as days progress. I am calling this application `Owncast-X`.
@@ -48,7 +64,7 @@ The [demo][Demo App] is just a POC. The larger vision is to have an array of app
 [README Frontend]: <../main/frontend/README.md>
 [README Auth Server]: <../main/auth-server/README.md>
 [Future plans]: <../main/README.md#future-plans>
-[Demo Video]: <>
+[Demo Video]: <https://youtu.be/pMP9pZe77B4>
 [Demo App]: <https://authfa2-frontend.vercel.app/>
 [Demo Backend]: <https://authfa2-backend.herokuapp.com/>
 [Demo FA2 Contract]: <https://better-call.dev/jakartanet/KT1X2ifoZhfgz1AhYfHVV36P1sf9UwJS56HY/operations>
