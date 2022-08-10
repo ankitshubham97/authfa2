@@ -32,7 +32,9 @@ This project is developed as part of [Tezasia Hackathon][Tezasia Hackathon] (but
 
 ### For the panelists/judges/reviewers of TezAsia Hackathon 2022
 The demo video is here: https://youtu.be/pMP9pZe77B4
+
 The app is deployed at https://authfa2-frontend.vercel.app/
+
 The app is based on Jakartanet and the related FA2 smart contract is deployed [here][Demo FA2 Contract] (Contract address: KT1X2ifoZhfgz1AhYfHVV36P1sf9UwJS56HY)
 
 If you want to interact with the app, you would need a wallet which has the 'Rick' FA2 token (as told in the demo video). Here is a list of private keys of the wallets which contain the 'Rick' FA2 tokens:
