@@ -49,9 +49,14 @@ const App = () => {
         <div className="mt-2">
           {(() => {
             if (accessToken) {
-              return <img src={content} alt="loading-new..." />
+              return <img src={content} alt="loading..." />
             }
-            return <h1>It looks like either your wallet is disconnected or you don't have the correct FA2 token with you 😔</h1>
+            return (
+              <div>
+                <h1><center>It looks like either your wallet is disconnected or you don't have <a href="https://better-call.dev/jakartanet/KT1X2ifoZhfgz1AhYfHVV36P1sf9UwJS56HY/">the correct FA2 token</a> with you 😔</center></h1>
+                <div><center>This is for the purpose of demonstrating authfa2. If you are a panelist of <a href="https://unstop.com/competition/tezasia-hackathon-tezos-india-357710">TezAsia Hackathon 2022</a>, then please follow <a href="https://github.com/ankitshubham97/authfa2#authfa2">this guideline.</a></center></div>
+              </div>
+            );
           })()}
           
         </div>

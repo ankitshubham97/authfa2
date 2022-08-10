@@ -45,10 +45,13 @@ const Navbar = (props) => {
   }
 
   return (
-    <div className="navbar navbar-dark bg-dark fixed-top">
+    <div className="navbar navbar-dark bg-warning fixed-top">
       <div className="container py-2">
         <a href="/" className="navbar-brand">
           Tezos AuthFA2 Demo
+        </a> 
+        <a href="https://github.com/ankitshubham97/authfa2#authfa2">
+          <img src="github-logo-6531.png" alt="public-address" className="ml-2" />
         </a>
         <div className="d-flex">
           {(() => {
@@ -56,7 +59,7 @@ const Navbar = (props) => {
             if (publicAddr && publicAddr !== "") {
               return <button className="btn btn-outline-secondary" disabled>Connected to ${publicAddr}</button>;
             }
-            return <button onClick={onConnectWallet} className="btn btn-outline-info"> Connect Wallet </button>;
+            return <button onClick={onConnectWallet} className="btn btn-outline-success"> Connect Wallet </button>;
           })()}
           &nbsp;
           {(() => {
