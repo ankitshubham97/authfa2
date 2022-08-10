@@ -9,8 +9,6 @@ export const getAccessToken = async ({signature, walletPublicKey, walletPublicAd
         signature,
         walletPublicKey,
         walletPublicAddress,
-        nftContractAddress: "KT1X2ifoZhfgz1AhYfHVV36P1sf9UwJS56HY",
-        nftId: "0"
       },
       {
         withCredentials: true,

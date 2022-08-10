@@ -18,13 +18,11 @@ async function doesWalletOwnNft(
   return currentOwnerAddress === walletPublicKey;
 }
 
-function createToken(secret: string, getTokenRequest: GetTokenRequest): string {
+function createToken(secret: string, walletPublicKey: string, nftContractAddress: string): string {
   const expiresIn = '1h';
-  const { walletPublicKey, nftContractAddress, nftId } = getTokenRequest;
   const jwtAccessTokenPayload: JwtAccessTokenPayload = {
     walletPublicKey,
     nftContractAddress,
-    nftId,
   };
   return jwt.sign(jwtAccessTokenPayload, secret, { expiresIn });
 }
@@ -33,14 +31,18 @@ export { GetTokenResponseSuccess, GetTokenResponseFailure, GetTokenResponse };
 export { JwtAccessTokenPayload };
 export default function AuthNft() {
   let _secret: string;
+  let _nftContractAddress: string;
 
   return {
     init: function ({
       secret,
+      nftContractAddress,
     }: {
       secret: string;
+      nftContractAddress: string;
     }) {
       _secret = secret;
+      _nftContractAddress = nftContractAddress;
     },
     getToken: async function (
       getTokenRequest: GetTokenRequest
@@ -50,8 +52,6 @@ export default function AuthNft() {
         signature,
         walletPublicKey,
         walletPublicAddress,
-        nftContractAddress,
-        nftId,
       } = getTokenRequest;
       try {
         if (!verifySignature(nonce, walletPublicKey, signature)) {
@@ -67,7 +67,7 @@ export default function AuthNft() {
         if (
           !(await doesWalletOwnNft(
             walletPublicAddress,
-            nftContractAddress,
+            _nftContractAddress,
           ))
         ) {
           return {
@@ -80,11 +80,10 @@ export default function AuthNft() {
         }
         return {
           data: {
-            accessToken: createToken(_secret, getTokenRequest),
+            accessToken: createToken(_secret, walletPublicKey, _nftContractAddress),
             walletPublicKey,
             walletPublicAddress,
-            nftContractAddress,
-            nftId,
+            nftContractAddress: _nftContractAddress,
             iat: Date.now(),
             exp: Date.now() + 1000 * 60 * 60 * 24 * 30,
           },

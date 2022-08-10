@@ -8,7 +8,6 @@ export interface GetTokenResponseSuccess {
   walletPublicKey: string;
   walletPublicAddress: string;
   nftContractAddress: string;
-  nftId: string;
   iat: number;
   exp: number;
 }

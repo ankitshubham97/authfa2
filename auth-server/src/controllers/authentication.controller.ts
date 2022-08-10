@@ -9,7 +9,8 @@ class AuthenticationController implements Controller {
   public router = express.Router();
   public authnft = AuthNft();
   public _ = this.authnft.init({
-    secret: process.env.JWT_SECRET ?? ''
+    secret: process.env.JWT_SECRET ?? '',
+    nftContractAddress: process.env.NFT_CONTRACT_ADDRESS ?? '',
   });
 
   constructor() {
@@ -26,15 +27,13 @@ class AuthenticationController implements Controller {
     request: express.Request,
     response: express.Response
   ) => {
-    const { nonce, signature, walletPublicKey, walletPublicAddress, nftContractAddress, nftId } =
+    const { nonce, signature, walletPublicKey, walletPublicAddress } =
       request.body;
     const tokenResponse = await this.authnft.getToken({
       nonce,
       signature,
       walletPublicKey,
       walletPublicAddress,
-      nftContractAddress,
-      nftId,
     });
     if (tokenResponse.code === 200) {
       const data = tokenResponse.data as GetTokenResponseSuccess;

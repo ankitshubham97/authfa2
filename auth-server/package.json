@@ -1,5 +1,5 @@
 {
-  "name": "authnft-server-demo",
+  "name": "authfa2-backend",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -78,7 +78,7 @@
     }
   },
   "dependencies": {
-    "authfa2": "1.0.1",
+    "authfa2": "1.0.3",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "copyfiles": "^2.4.1",
