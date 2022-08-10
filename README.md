@@ -30,7 +30,7 @@ This repository contains 3 sub-projects:
 This project is developed as part of [Tezasia Hackathon][Tezasia Hackathon] (but the project itself aligns with my larger vision; see [Future plans][Future plans] below). If you are a panelist/judge/reviewer, please check out the steps [here][README Frontend] on how to interact with the project.
 
 ## Future plans
-The [demo][Demo App] is just an MVP. The larger vision is to have an array of applications powered by AuthFA2 and similar protocols in other chains as well. As a matter of fact, after getting accepted as a builder fellow in the [Polygon Fellowship, 2022][Polygon Fellowship 2022], I have been working on developing a similar project on Polygon chain. I was able to integrate my protocol with [Owncast][Owncast Repo] (demo video [here][Owncast-X demo]) and more improvements are done as days progress. I am calling this application `Owncast-X`.
+The [demo][Demo App] is just a POC. The larger vision is to have an array of applications powered by AuthFA2 and similar protocols in other chains as well. As a matter of fact, after getting accepted as a builder fellow in the [Polygon Fellowship, 2022][Polygon Fellowship 2022], I have been working on developing a similar project on Polygon chain. I was able to integrate my protocol with [Owncast][Owncast Repo] (demo video [here][Owncast-X demo]) and more improvements are done as days progress. I am calling this application `Owncast-X`.
 `Owncast-X` is one of the applications which would find immense importance in the creator economy space. The possibility is endless when it comes to develop other ground breaking applications with AuthFA2. Some applications that are in pipeline deal with:
 1. Copyright protection
 2. Document vaults

@@ -1,7 +1,7 @@
 # AuthFA2 Protocol and SDK
 I have documented the protocol in the form of a [whitepaper][NFT-Auth WP].
 
-I have developed [an SDK in NodeJS][AuthFA2 NodeJS SDK]. This could be used by any application intending to implement AuthFA2. There is a sample web-app which demonstrates how; the entire code can be found here: [frontend][README Frontend] [backend][README Auth Server]
+I have developed [an SDK in NodeJS][AuthFA2 NodeJS SDK]. This could be used by any application intending to implement AuthFA2. There is a sample web-app which demonstrates how; the entire code can be found here: [frontend][Frontend Code] [backend][Auth Server Code]
 
 This code is live and up at https://authfa2-frontend.vercel.app/
 
@@ -9,5 +9,5 @@ This code is live and up at https://authfa2-frontend.vercel.app/
 [AuthFA2 NodeJS SDK]: <https://www.npmjs.com/package/authfa2>
 [Demo App]: <https://authfa2-frontend.vercel.app/>
 [Demo Backend]: <https://authfa2-backend.herokuapp.com/>
-[README Auth Server]: <../main/auth-server/README.md>
-[README Frontend]: <../main/frontend/README.md>
+[Auth Server Code]: <https://github.com/ankitshubham97/authfa2/tree/main/auth-server>
+[Frontend Code]: <https://github.com/ankitshubham97/authfa2/tree/main/frontend>
