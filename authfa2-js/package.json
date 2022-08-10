@@ -1,6 +1,6 @@
 {
   "name": "authfa2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Server library for FA2-based authentication",
   "license": "MIT",
   "author": "Ankit Shubham",

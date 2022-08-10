@@ -3,6 +3,7 @@ import GetTokenResponse, {
   GetTokenResponseFailure,
   GetTokenResponseSuccess,
 } from './interfaces/getTokenResponse';
+import GetFa2TokenResponse from './interfaces/getFa2TokenResponse';
 import JwtAccessTokenPayload from './interfaces/jwtAccessTokenPayload';
 import { verifySignature } from '@taquito/utils';
 import axios from 'axios';
@@ -13,9 +14,13 @@ async function doesWalletOwnNft(
   nftContractAddress: string,
 ): Promise<boolean> {
   const response = await axios.get(`https://api.jakartanet.tzkt.io/v1/tokens/balances?token.contract=${nftContractAddress}&balance=1`);
-  const { data } = response;
-  const currentOwnerAddress = data[0].account.address;
-  return currentOwnerAddress === walletPublicKey;
+  const data = response.data as GetFa2TokenResponse[];
+  return data.find((item) => {
+    if (item.account.address === walletPublicKey) {
+      return true;
+    }
+    return false;
+  }) !== undefined;
 }
 
 function createToken(secret: string, walletPublicKey: string, nftContractAddress: string): string {
