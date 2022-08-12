@@ -54,6 +54,15 @@ The following wallet is also the administrator for [our FA2 smart contract][Demo
 
 To check the unhappy path, you could just use any random wallet to connect to the app.
 
+<ins><b> App testing </b></ins>
+The [poc app][Demo App] runs fine on the following platforms:
+| Browser | Version | Works in incognito mode too? | Comments |
+| ------ | ------ | ------ | ------ |
+| Chrome | Version 104.0.5112.81 (Official Build) (64-bit) | ❌ | Chrome tightens on CORS in the incognito mode. This poc app uses different domains to host [frontend][Demo App] and [backend][Demo Backend] and Chrome's incognito mode is not happy about this 😔 |
+| Brave | Version 1.42.88 Chromium: 104.0.5112.81 (Official Build) (x86_64) | ✔️ |  |
+| Firefox | Version 103.0.2 (64-bit)  | ✔️ |  |
+| Edge | Version 104.0.1293.47 (Official build) (64-bit) | ✔️ |  |
+
 You could also choose to run your own instance of the backend and the frontend. You would find the instructions in the respective README files:
 - [Running Backend][README Auth Server]
 - [Running Frontend][README Frontend]
