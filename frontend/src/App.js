@@ -54,7 +54,8 @@ const App = () => {
             return (
               <div>
                 <h1><center>It looks like either your wallet is disconnected or you don't have <a href="https://better-call.dev/jakartanet/KT1X2ifoZhfgz1AhYfHVV36P1sf9UwJS56HY/">the correct FA2 token</a> with you 😔</center></h1>
-                <div><center>This is for the purpose of demonstrating authfa2. If you are a panelist of <a href="https://unstop.com/competition/tezasia-hackathon-tezos-india-357710">TezAsia Hackathon 2022</a>, then please follow <a href="https://github.com/ankitshubham97/authfa2#for-the-panelistsjudgesreviewers-of-tezasia-hackathon-2022">this guideline.</a></center></div>
+                <div><center><b>This is for the purpose of demonstrating authfa2. If you are a judge/panelist/reviewer of <a href="https://unstop.com/competition/tezasia-hackathon-tezos-india-357710">TezAsia Hackathon 2022</a>, then please follow <a className="wrapper" href="https://github.com/ankitshubham97/authfa2#for-the-panelistsjudgesreviewers-of-tezasia-hackathon-2022">this guideline.</a></b></center></div>
+                <div><center><b>👉 <a className="wrapper" href="https://docs.google.com/presentation/d/1n39lAM0Rk1jLWsQPPd4DTn5_W6SHX5zEGTDt6yY1jo4/edit?usp=sharing">Find the presentation slides here!</a></b></center></div>
                 <hr></hr>
                 <div>✔️ <a href="https://github.com/ankitshubham97/authfa2#problems-with-the-current-auth-mechanisms">Problem proposed and Solution figured out</a></div>
                 <div>✔️ <a href="https://ankitshubham.notion.site/NFT-Auth-Protocol-4de9641932a24ec3a59665adc97b3ebb">AuthFA2 protocol Whitepaper</a></div>
@@ -79,7 +80,7 @@ const App = () => {
                       <td>Chrome</td>
                       <td>Version 104.0.5112.81 (Official Build) (64-bit)</td>
                       <td>❌</td>
-                      <td>Chrome tightens on CORS in the incognito mode. This poc app uses different domains to host [frontend][Demo App] and [backend][Demo Backend] and Chrome's incognito mode is not happy about this 😔</td>
+                      <td>Chrome tightens on CORS in the incognito mode. This poc app uses different domains to host <a href = "#">frontend</a> and <a href="https://authfa2-backend.herokuapp.com/">backend</a> and Chrome's incognito mode is not happy about this 😔</td>
                     </tr>
                     <tr>
                       <td>Brave</td>
