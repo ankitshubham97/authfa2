@@ -63,6 +63,44 @@ const App = () => {
                 <div>✔️ <a href="https://youtu.be/pMP9pZe77B4">Demo Video</a></div>
                 <div>😎 <b>Brownie point: </b>Working on <a href="https://www.youtube.com/watch?v=7Sy4ijl2Nc8">a similar solution</a> as an ACCEPTED PROJECT in <a href="https://polygon.technology/polygon-fellowship/"><b>Polygon Fellowship 2022</b></a> for Polygon chain.</div>
                 <div>🎯 <a href="https://github.com/ankitshubham97/authfa2#future-plans">The larger vision</a></div>
+                <hr></hr>
+                <h4>App runs fine on:</h4>
+                <table className="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Browser</th>
+                      <th>Version</th>
+                      <th>Works in incognito mode too?</th>
+                      <th>Comments</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Version 104.0.5112.81 (Official Build) (64-bit)</td>
+                      <td>❌</td>
+                      <td>Chrome tightens on CORS in the incognito mode. This poc app uses different domains to host [frontend][Demo App] and [backend][Demo Backend] and Chrome's incognito mode is not happy about this 😔</td>
+                    </tr>
+                    <tr>
+                      <td>Brave</td>
+                      <td>Version 1.42.88 Chromium: 104.0.5112.81 (Official Build) (x86_64)</td>
+                      <td>✔️</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Version 103.0.2 (64-bit)</td>
+                      <td>✔️</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Edge</td>
+                      <td>Version 104.0.1293.47 (Official build) (64-bit)</td>
+                      <td>✔️</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             );
           })()}
