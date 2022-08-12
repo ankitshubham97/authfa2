@@ -37,11 +37,22 @@ The app is deployed at https://authfa2-frontend.vercel.app/
 
 The app is based on Jakartanet and the related FA2 smart contract is deployed [here][Demo FA2 Contract] (Contract address: KT1X2ifoZhfgz1AhYfHVV36P1sf9UwJS56HY)
 
-If you want to interact with the app, you would need a wallet which has the 'Rick' FA2 token (as told in the demo video). Here is a list of private keys of the wallets which contain the 'Rick' FA2 tokens:
-```sh
-edskS66ZbqHyZWuRAk2Js1veaK6h1vju6DoZwMAuxkMP37LgVjXJH8wm7cWCTZiazWaaPG8rDXq4h9v2G8hJUtvx5V38vgiXVi
-```
-To check the unhappy path, you could just use any random wallet.
+<ins><b>Checking happy path:</b></ins>
+
+If you want to interact with the app, you would need a wallet which has [the 'Rick' FA2 token][Demo FA2 Contract] (as told in the [demo video][Demo Video]). Here is a list of wallets which contain the [the 'Rick' FA2 tokens][Demo FA2 Contract]:
+| Public address | Private key |
+| ------ | ------ |
+| tz1XQQ6a3SdYaarUFFjo5DZq18RSeqTrdaew | edskS66ZbqHyZWuRAk2Js1veaK6h1vju6DoZwMAuxkMP37LgVjXJH8wm7cWCTZiazWaaPG8rDXq4h9v2G8hJUtvx5V38vgiXVi |
+| tz1gYnLf4DL6M4kb4dc5cm778bKFJrMCDoHv | edskRqKtAEHfzsL5G8vahwCo1u1De6kNPC5gGv8PU9Rd9nbi6nxkssUCG7HvEBDPVrMy45oVYxG698smijqMqTfZC5vceEAcHV |
+
+The following wallet is also the administrator for [our FA2 smart contract][Demo FA2 Contract]. So, you could also mint new tokens to your desirable wallet and then check the happy path for the app by connecting that wallet.
+| Public address | Private key |
+| ------ | ------ |
+| tz1XQQ6a3SdYaarUFFjo5DZq18RSeqTrdaew | edskS66ZbqHyZWuRAk2Js1veaK6h1vju6DoZwMAuxkMP37LgVjXJH8wm7cWCTZiazWaaPG8rDXq4h9v2G8hJUtvx5V38vgiXVi |
+
+<ins><b>Checking unhappy path</b></ins>
+
+To check the unhappy path, you could just use any random wallet to connect to the app.
 
 You could also choose to run your own instance of the backend and the frontend. You would find the instructions in the respective README files:
 - [Running Backend][README Auth Server]
